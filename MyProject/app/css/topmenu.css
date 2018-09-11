@@ -1,0 +1,196 @@
+@charset "UTF-8";
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-background-size: auto auto;
+          background-size: auto;
+}
+
+body {
+  background-color: black;
+}
+
+.topmenu {
+  display: grid;
+  grid-template-columns: 1fr repeat(1, minmax(auto, 60em)) 1fr;
+  background-color: #111111;
+  grid-auto-rows: 50px;
+}
+
+.topmenu > .content {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(auto, 50em)) 10em 7em 6em;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Condensed Light', arial;
+}
+
+.topmenu > .content ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  margin-top: 14px;
+  font-size: 0.9em;
+  list-style-type: none;
+}
+
+.topmenu > .content ul:after {
+  display: block;
+  content: ' ';
+  clear: both;
+  float: none;
+  list-style: none;
+}
+
+.topmenu > .content ul.menu > li > a {
+  display: block;
+  color: #7e7d7d;
+  text-decoration: none;
+  /*Флаг Англии */
+  list-style: none;
+  background: url("../img/1_topmenu/us flag.png") no-repeat 50px 50px;
+  background-position: 15% 50%;
+}
+
+.topmenu > .content ul.menu > li > a:hover {
+  color: #f25822;
+  text-shadow: #e75239 0 0 10px;
+}
+
+.topmenu > .content ul.submenu {
+  display: none;
+  position: relative;
+  left: 0;
+  /*Флаг России */
+  list-style: none;
+  background: url("../img/1_topmenu/ru flag.png") no-repeat 50px 50px;
+  background-position: 15% 50%;
+}
+
+.topmenu > .content ul.submenu > li {
+  display: block;
+}
+
+.topmenu > .content ul.submenu > li > a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  color: #7e7d7d;
+}
+
+.topmenu > .content ul.submenu > li > a:hover {
+  color: #f25822;
+  text-shadow: #e75239 0 0 10px;
+}
+
+.topmenu > .content ul.menu > li:hover > ul.submenu {
+  display: block;
+  position: relative;
+}
+
+.topmenu > .content ul.menu > li > a > span {
+  position: inherit;
+  /*font-size: 0.4em; */
+  text-align: center;
+  /*content: " "; */
+  /* border: 5px solid; */
+  /* border-color: white transparent transparent transparent; */
+}
+
+.topmenu > .content nav {
+  margin-top: 14px;
+}
+
+.topmenu > .content nav a {
+  text-decoration: none;
+  color: #7e7d7d;
+  padding: 0.5em 0.5em;
+  font-size: 0.6em;
+  text-align: left;
+}
+
+.topmenu > .content nav a:hover {
+  color: #f25822;
+  text-shadow: #e75239 0 0 10px;
+}
+
+.topmenu > .content > .social span {
+  margin-top: 12px;
+  padding: 1px;
+  background: #656666;
+  text-align: center;
+  border: 2px solid #656666;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  width: 20px;
+  text-decoration: none;
+}
+
+.topmenu > .content > .social span:hover {
+  text-decoration: none;
+  color: #f25822;
+  text-shadow: #e75239 0 0 10px;
+  background: #ffce81;
+  -webkit-box-shadow: 0 0 20px #f25822;
+          box-shadow: 0 0 20px #f25822;
+  border: 2px solid #ffce81;
+}
+
+.topmenu > .content > .social a {
+  text-decoration: none;
+  color: white;
+}
+
+.topmenu > .content > .social a:hover {
+  text-decoration: none;
+  color: #f25822;
+  text-shadow: #e75239 0 0 10px;
+}
+
+.topmenu > .content > .registration {
+  text-decoration: none;
+  color: #7e7d7d;
+  text-align: center;
+  margin-top: 14px;
+}
+
+.topmenu > .content > .registration a:hover {
+  color: #f25822;
+  text-shadow: #e75239 0 0 10px;
+}
+
+.topmenu > .content > .registration span {
+  color: #f25822;
+  text-shadow: #e75239 0 0 10px;
+  padding: 0.5em 0.5em;
+  font-size: 0.6em;
+  cursor: default;
+}
+
+.topmenu > .content > .registration i {
+  color: #81fbff;
+  padding: 0;
+  font-size: 0.6em;
+  text-shadow: #81fbff 0 0 10px;
+}
+
+/*-------------------------------------------------------------- */
+/*Начало блока с выпадающим меню выбора языка */
+/*Иконка стрелочка вниз */
+/*-------------------------------------------------------------- */
+/*Начало блока с навигацией в шапке */
+/*-------------------------------------------------------------- */
+/*Не нужно, чтобы текст переносился на компьютерах */
+@media screen and (min-device-width: 800px) {
+  .topmenu {
+    white-space: nowrap;
+  }
+}
+
+/*-------------------------------------------------------------- */
+/*Начало блока с картинками  соцсетей */
+/*-------------------------------------------------------------- */
+/*Начало блока с кнопкой регистрации */
+/*-------------------------------------------------------------- */

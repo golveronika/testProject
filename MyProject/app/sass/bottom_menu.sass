@@ -1,0 +1,133 @@
+/*@import url(http://fonts.googleapis.com/css?family=Roboto Condensed:400,300,700);
+ *@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+ *@import url(http://allfont.ru/allfont.css?fonts=ubuntu-bold);
+
+/*Потому что в фаерфоксе не работал этот шрифт
+@font-face
+  font-family: 'Roboto Condensed'
+  font-style: normal
+  font-weight: 300
+  src: local("Roboto Condensed Light"), local("RobotoCondensed-Light"), url(http://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nBBQ_Gf4FfI8J4SYljBAylk.woff2) format("woff2"), url(http://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nNeiznanRB67rGZDYkMvKPc.woff) format("woff")
+
+
+*
+  padding: 0
+  margin: 0
+
+.bottom_menu
+  display: grid
+  grid-template-columns: 1fr repeat(1, minmax(auto, 60em)) 1fr
+  background-color: black
+  grid-auto-rows: 105px
+  border-top: 1px solid #c0dcff
+  border-bottom: 2px solid #3c43c5
+  box-shadow: 0 0 10px #3c43c5, inset 0 0 10px #3c43c5
+  > .content
+    display: grid
+    grid-template-columns: 30em 30em
+    >
+      .last_winners
+        display: grid
+        grid-template-rows: 40px 65px
+        > div > span
+          margin-left: 23px
+      .jackpot
+        /*background-color: #ab7ae3;
+        display: grid
+        grid-template-rows: 40px 65px
+
+/*Верхнее меню - надписи
+
+.topwrite
+  font-family: "Roboto Condensed", sans serif
+  display: flex
+  align-items: flex-end
+  color: #ffce81
+  font-weight: bolder
+  text-shadow: #e75239 0 0 10px, #e75239 0 0 5px
+  cursor: default
+
+/*--------------------Данные о победителях------------------------
+
+.slidemenu
+  display: grid
+  grid-template-columns: 23px auto auto auto auto auto auto auto
+
+.pointer
+  display: flex
+  align-items: center
+  a
+    font-size: 21px
+    color: #ffd0ca
+    text-shadow: #ff0000 0 0px 10px
+    text-decoration: none
+    &:hover
+      color: #ffffff
+      text-shadow: #ff0000 0 0 15px, 0px 0px 10px #ff8604, 0px 0px 5px #ff0000
+
+.pictshow
+  margin-top: 10px
+  a img:hover
+    box-shadow: inset 0px 0px 10px  #ffce81, 0px 0px 10px  #ffce81
+
+.picttext
+  margin-top: 7px
+  font-family: "Roboto Condensed", sans serif
+  font-size: 13px
+  white-space: nowrap
+  cursor: default
+
+/*Подписи
+
+.gamename
+  font-weight: bold
+  color: white
+  font-size: 9px
+
+.winvalue
+  font-weight: bolder
+  font-size: 13px
+  color: #f2de7b
+
+.playername
+  font-size: 10px
+  color: white
+
+/*-----------------Медали---------------------------------------
+
+.medal
+  display: grid
+  grid-template-columns: auto auto auto
+  > div span
+    position: absolute
+    margin-top: 24px
+    margin-left: -10px
+    font-size: 20px
+    font-family: 'Ubuntu Bold', arial
+    font-weight: bolder
+    cursor: default
+    white-space: nowrap
+
+.gold
+  background: linear-gradient(#c88312, #feea87, #c88312)
+  /* подробнее про градиенты
+  -webkit-background-clip: text
+  /* подробнее про background-clip
+  -webkit-text-fill-color: transparent
+
+.silver
+  background: linear-gradient(#767171, #ffffff, #767171)
+  /* подробнее про градиенты
+  -webkit-background-clip: text
+  /* подробнее про background-clip
+  -webkit-text-fill-color: transparent
+
+.bronze
+  background: linear-gradient(#9e5324, #eb9548, #feedca, #eb9548, #9e5324)
+  /* подробнее про градиенты
+  -webkit-background-clip: text
+  /* подробнее про background-clip
+  -webkit-text-fill-color: transparent
+
+.bottom_menu > .content > .jackpot > div > span
+  margin-left: 15px

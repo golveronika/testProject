@@ -1,0 +1,128 @@
+/*@import url(http://fonts.googleapis.com/css?family=Roboto Condensed:400,300,700);
+
+*
+  padding: 0
+  margin: 0
+
+/*Потому что в фаерфоксе не работал этот шрифт
+@font-face
+  font-family: 'Roboto Condensed'
+  font-style: normal
+  font-weight: 300
+  src: local("Roboto Condensed Light"), local("RobotoCondensed-Light"), url(http://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nBBQ_Gf4FfI8J4SYljBAylk.woff2) format("woff2"), url(http://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nNeiznanRB67rGZDYkMvKPc.woff) format("woff")
+
+
+\::-webkit-input-placeholder, ::-moz-placeholder, :-moz-placeholder, :-ms-input-placeholder
+  font-style: italic
+
+/* Firefox 19+
+/* Firefox 18-
+
+\:focus
+  &::-webkit-input-placeholder, &::-moz-placeholder, &:-moz-placeholder, &:-ms-input-placeholder
+    color: transparent
+
+.topmenu_logo
+  display: grid
+  grid-template-columns: 1fr repeat(1, minmax(auto, 60em)) 1fr
+  background-color: black
+  background-image: url(img/2_topmenu_logo/logo.png)
+  grid-auto-rows: 80px
+  border-top: 1px solid #00aaff
+  border-bottom: 1px solid #00aaff
+  > .content
+    display: grid
+    grid-template-columns: minmax(31em, 31em) minmax(auto, 25em)
+    padding: 0
+    margin: 0
+    margin-top: 30px
+    > .regist
+      text-align: right
+      display: grid
+      grid-template-columns: 8em 8em 8em 5em
+      padding: 0
+      margin: 0
+      input
+        border-radius: 0.2em
+        border-style: solid
+        padding: 3px
+        width: 100px
+        font-family: "Roboto Condensed", sans serif
+        margin-top: -3px
+      span
+        > a
+          display: block
+          text-align: center
+          font-style: italic
+          padding: 0px
+          margin-top: 3px
+          margin-left: 10px
+          color: #7e7d7d
+          font-size: 10px
+          text-decoration: none
+        a:hover
+          color: #f25822
+          text-shadow: #e75239 0 0 10px
+      a
+        font-family: "Roboto Condensed", sans serif
+      > div > a
+        &#buttonlog
+          background-image: url(../img/2_topmenu_logo/blik.png)
+          font-weight: bolder
+          border-radius: 3px
+          box-shadow: inset 0px 0px 10px  #ffce81, 0px 0px 10px  #ffce81
+          font-size: 13px
+          text-align: center
+          color: #f9b46b
+          padding: 3px 16px
+          text-decoration: none
+          border: 2px solid #ffce81
+          &:hover
+            background-image: url(../img/2_topmenu_logo/blik.png)
+            font-weight: bolder
+            border-radius: 3px
+            box-shadow: inset 0px 0px 20px  #f16323, inset 0px 0px 10px  #ffce81, 0px 0px 15px  #ffce81
+            font-size: 13px
+            text-align: center
+            color: #f9b46b
+            padding: 3px 16px
+            text-decoration: none
+            border: 2px solid #ffce81
+        &#buttonreg
+          background-image: url(../img/2_topmenu_logo/blik2.png)
+          font-weight: bolder
+          border-radius: 3px
+          box-shadow: inset 0px 0px 10px  #81fbff, 0px 0px 10px  #81fbff
+          font-size: 13px
+          text-align: center
+          color: #81fbff
+          padding: 3px 16px
+          text-decoration: none
+          border: 2px solid #81fbff
+          &:hover
+            background-image: url(../img/2_topmenu_logo/blik2.png)
+            font-weight: bolder
+            border-radius: 3px
+            box-shadow: inset 0px 0px 20px  #519ff8, inset 0px 0px 10px  #4993f4, 0px 0px 15px  #81fbff
+            font-size: 13px
+            text-align: center
+            color: #81fbff
+            padding: 3px 16px
+            text-decoration: none
+            border: 2px solid #81fbff
+
+/*Ссылка забытого пароля
+
+/*У всех ссылок такой шрифт
+
+/*Залогиниться
+
+/*Зарегестрироваться
+
+/*--------------------------------------------------------------
+/*Не нужно, чтобы текст переносился на компьютерах
+@media screen and (min-device-width: 800px)
+  .topmenu_logo > .content
+    white-space: nowrap
+
+/*--------------------------------------------------------------

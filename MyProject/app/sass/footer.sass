@@ -1,0 +1,71 @@
+*
+  padding: 0
+  margin: 0
+
+footer
+  display: grid
+  grid-template-columns: 1fr repeat(1, minmax(auto, 60em)) 1fr
+  background-color: black
+  grid-auto-rows: 380px
+  cursor: default
+  > .content
+    /*background-color: #486582;
+    padding: 0
+    margin: 0
+    display: grid
+    grid-template-rows: 60px 100px 220px
+    text-align: center
+    white-space: nowrap
+
+/*Ссылки ABOUT----------------------------
+
+.about
+  text-decoration: none
+  font-family: 'Roboto Condensed'
+  color: white
+  margin: 20px 0px
+  a
+    text-decoration: none
+    color: #adadad
+    padding: 0px  5px
+    &:hover
+      color: #c6b429
+
+/*Ссылки Payment----------------------------
+
+.payment
+  margin: 0px 0px
+  padding: 15px 0px
+  border: 2px solid transparent
+  border-image: linear-gradient(to right, black 10em, #00aaff 30em, black 48em)
+  border-image-slice: 1
+  a
+    margin: 10px
+    img
+      /*Делаем ЧБ
+      -webkit-filter: grayscale(100%)
+      -moz-filter: grayscale(100%)
+      -ms-filter: grayscale(100%)
+      -o-filter: grayscale(100%)
+      filter: grayscale(100%)
+      filter: gray
+      /* IE 6-9
+      &:hover
+        -webkit-filter: none
+        -moz-filter: none
+        -ms-filter: none
+        -o-filter: none
+        filter: none
+        filter: none
+        /* IE 6-9
+
+/*lICENSE----------------------------
+
+.license
+  /*background-color: pink;
+  margin: 10px
+  span
+    text-decoration: none
+    font-family: 'Roboto Condensed'
+    color: #adadad
+    margin: 10px

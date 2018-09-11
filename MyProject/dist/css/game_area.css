@@ -1,0 +1,480 @@
+@charset "UTF-8";
+/*@import url(http://fonts.googleapis.com/css?family=Roboto Condensed:400,300,700);
+ *@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+ *@import url(http://allfont.ru/allfont.css?fonts=ubuntu-bold); */
+/*Потому что в фаерфоксе не работал этот шрифт */
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Condensed Light"), local("RobotoCondensed-Light"), url(http://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nBBQ_Gf4FfI8J4SYljBAylk.woff2) format("woff2"), url(http://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nNeiznanRB67rGZDYkMvKPc.woff) format("woff");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.game_area {
+  display: grid;
+  grid-template-columns: 1fr repeat(1, minmax(auto, 60em)) 1fr;
+  background-image: url(../img/5_game/pattern.png);
+  grid-auto-rows: 960px;
+}
+
+.game_area > .content {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 50px 40px 780px 90px;
+}
+
+/*-------------Раздел меню------------------------- */
+.game_menu {
+  display: grid;
+  grid-template-columns: auto 25px auto 25px auto 25px auto 25px auto;
+}
+
+.game_menu div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+}
+
+.button_menu {
+  border: 2px solid #ffce81;
+  margin: 10px 0px;
+  font-size: 13px;
+  text-shadow: #e75239 0 0 10px, #e75239 0 0 5px;
+  font-family: 'Roboto Condensed';
+  color: #ffce81;
+  font-weight: bold;
+  padding: 0px 15%;
+  -webkit-box-shadow: inset 0px 0px 10px  #f8a617, 0px 0px 10px  #ffce81;
+          box-shadow: inset 0px 0px 10px  #f8a617, 0px 0px 10px  #ffce81;
+}
+
+.button_menu img {
+  position: absolute;
+  margin: -10px -35px;
+}
+
+.button_menu a {
+  padding-left: 30%;
+  text-decoration: none;
+  color: #ffce81;
+}
+
+.button_menu:hover {
+  background-image: url(../img/5_game/hoverRectangle.png);
+}
+
+/*Маленькая ширина окна */
+@media screen and (max-width: 600px) {
+  .button_menu a span {
+    display: none;
+  }
+  .button_menu img {
+    position: inherit;
+    margin-left: -12px;
+  }
+}
+
+/*-------------Раздел меню поиска------------------------- */
+.search_menu {
+  display: grid;
+  grid-template-columns: auto 220px;
+}
+
+/*Сортировка */
+.sort {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  font-family: 'Roboto Condensed';
+  color: white;
+  font-size: 14px;
+  cursor: default;
+}
+
+.sort > a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+}
+
+/*Поиск */
+.search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  font-family: 'Roboto Condensed';
+  color: white;
+  font-size: 14px;
+  cursor: default;
+  position: relative;
+  text-align: right;
+  float: right;
+}
+
+.search input {
+  width: 220px;
+  height: 25px;
+  padding-left: 5px;
+  border: 3px solid #88fbff;
+  -webkit-box-shadow: inset 0px 0px 0px  #88fbff, 0px 0px 10px  #88fbff;
+          box-shadow: inset 0px 0px 0px  #88fbff, 0px 0px 10px  #88fbff;
+  text-align: left;
+  background-color: black;
+  font-family: 'Roboto Condensed';
+  color: white;
+}
+
+.search button {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.search button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  text-shadow: #e75239 0 0 10px, #e75239 0 0 5px;
+  color: #ffce81;
+}
+
+::-webkit-input-placeholder, ::-moz-placeholder, :-moz-placeholder, :-ms-input-placeholder {
+  font-style: italic;
+  color: #c5c5c5;
+}
+
+/* Firefox 19+ */
+/* Firefox 18- */
+/*-------------Раздел меню игры------------------------- */
+.games {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  font-family: 'Roboto Condensed';
+  color: white;
+  cursor: default;
+}
+
+/*Столбцы */
+/*------------------------------------ */
+.row1 {
+  /*background-color: #ecb55c; */
+  grid-column: 1/2;
+  grid-row: 1/3;
+  display: grid;
+  grid-template-rows: 150px 150px 150px 150px 150px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.games a {
+  position: absolute;
+}
+
+/*--------------------Стиль для всех колонок и элементов------------- */
+.play_now {
+  margin: 30px -138px;
+  background-image: url(../img/5_game/PLAY_NOW.png);
+  font-weight: bolder;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: inset 0px 0px 10px  #81fbff, 0px 0px 10px  #81fbff;
+          box-shadow: inset 0px 0px 10px  #81fbff, 0px 0px 10px  #81fbff;
+  font-size: 13px;
+  text-align: center;
+  color: #81fbff;
+  padding: 3px 16px;
+  text-decoration: none;
+  border: 2px solid #81fbff;
+}
+
+.demo {
+  margin: 60px -125px;
+  background-image: url(../img/5_game/DEMO.png);
+  font-weight: bolder;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: inset 0px 0px 10px  #ffce81, 0px 0px 10px  #ffce81;
+          box-shadow: inset 0px 0px 10px  #ffce81, 0px 0px 10px  #ffce81;
+  font-size: 13px;
+  text-align: center;
+  color: #f9b46b;
+  padding: 3px 16px;
+  text-decoration: none;
+  border: 2px solid #ffce81;
+}
+
+/*-------Делаем прозрачный фон при наведении на него и ссылки на передний план----------------------------- */
+.back img {
+  z-index: 2;
+  position: absolute;
+}
+
+.back:hover img {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  z-index: 0;
+  -webkit-box-shadow: inset 0px 0px 20px  #00d9ff, inset 0px 0px 10px  #00d9ff, 0px 0px 15px  #00d9ff;
+          box-shadow: inset 0px 0px 20px  #00d9ff, inset 0px 0px 10px  #00d9ff, 0px 0px 15px  #00d9ff;
+}
+
+.hrefy_2 .play_now {
+  margin: 30px 43px;
+  z-index: 1;
+}
+
+.hrefy_2 .play_now:hover {
+  font-weight: bolder;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: inset 0px 0px 20px  #519ff8, inset 0px 0px 10px  #4993f4, 0px 0px 15px  #81fbff;
+          box-shadow: inset 0px 0px 20px  #519ff8, inset 0px 0px 10px  #4993f4, 0px 0px 15px  #81fbff;
+  font-size: 13px;
+  text-align: center;
+  color: #81fbff;
+  padding: 3px 16px;
+  text-decoration: none;
+  border: 2px solid #81fbff;
+}
+
+.hrefy_2 .demo {
+  margin: 65px 56px;
+  z-index: 1;
+}
+
+.hrefy_2 .demo:hover {
+  font-weight: bolder;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: inset 0px 0px 20px  #f16323, inset 0px 0px 10px  #ffce81, 0px 0px 15px  #ffce81;
+          box-shadow: inset 0px 0px 20px  #f16323, inset 0px 0px 10px  #ffce81, 0px 0px 15px  #ffce81;
+  font-size: 13px;
+  text-align: center;
+  color: #f9b46b;
+  padding: 3px 16px;
+  text-decoration: none;
+  border: 2px solid #ffce81;
+}
+
+.gamename_bottom {
+  position: absolute;
+  margin: 130px 1px;
+}
+
+/*------------------------------------ */
+.row2 {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  display: grid;
+  grid-template-rows: 150px 150px 150px 150px 150px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+/*------------------------------------ */
+.row3 {
+  grid-column: 3/4;
+  grid-row: 1/3;
+  display: grid;
+  grid-template-rows: 150px 150px 150px 150px 150px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+/*------------------------------------ */
+.row4 {
+  grid-column: 4/5;
+  grid-row: 2/3;
+  height: 505px;
+  display: grid;
+  grid-template-rows: 150px 150px 150px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+/*------------------------------------ */
+.row5 {
+  grid-column: 5/6;
+  grid-row: 2/3;
+  height: 505px;
+  display: grid;
+  grid-template-rows: 150px 150px 150px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+/*------------РЕКЛАМА---------------------------------------------------- */
+.promoution {
+  /*background-color: pink; */
+  grid-column: 4/6;
+  grid-row: 1;
+  height: 310px;
+  display: grid;
+  grid-template-rows: 35px 230px;
+}
+
+.top_prom {
+  background-color: white;
+  font-family: 'Roboto Condensed';
+  margin: 4px 0px;
+  padding: 0px 0px;
+  color: #10154d;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+  -webkit-box-shadow: 0px 0px 10px  #d6f0ff, 0px 0px 10px  #10154d;
+          box-shadow: 0px 0px 10px  #d6f0ff, 0px 0px 10px  #10154d;
+}
+
+.top_prom span {
+  padding: 150px;
+  font-weight: bold;
+}
+
+.bottom_prom {
+  margin: 0;
+  padding: 0;
+}
+
+/*Кружочки */
+.circle_hrefs a {
+  position: absolute;
+  z-index: 1;
+  font-size: 10px;
+  text-decoration: none;
+  color: #c3c2b6;
+  text-shadow: 2px 2px 2px black;
+}
+
+.circle_hrefs a:hover {
+  text-shadow: 0px 0px 10px white, 0px 0px 5px white;
+}
+
+.circle1 {
+  margin: 10px 70px;
+}
+
+.circle2 {
+  margin: 10px 50px;
+}
+
+.circle3 {
+  margin: 10px 30px;
+}
+
+.circle4 {
+  margin: 10px 10px;
+}
+
+.bottom_prom img {
+  z-index: 0;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+/*Подписи снизу рекламы */
+.writters {
+  z-index: 2;
+  position: absolute;
+  text-align: right;
+  margin: 150px 40px;
+}
+
+.lorem_top {
+  margin: 0px 0px;
+  font-family: 'Ubuntu Bold', arial;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c88312), color-stop(#feea87), to(#c88312));
+  background: -webkit-linear-gradient(#c88312, #feea87, #c88312);
+  background: -o-linear-gradient(#c88312, #feea87, #c88312);
+  background: linear-gradient(#c88312, #feea87, #c88312);
+  /* подробнее про градиенты */
+  -webkit-background-clip: text;
+  /* подробнее про background-clip */
+  -webkit-text-fill-color: transparent;
+  font-weight: bolder;
+}
+
+.lorem_bottom {
+  margin: 0px 0px;
+  font-size: 12px;
+}
+
+/*-------------Раздел больше игр------------------------- */
+.more_games {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.more_games_button {
+  margin: 30px -138px;
+  font-family: 'Roboto Condensed';
+  background-image: url(../img/5_game/moregames.png);
+  font-weight: bolder;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: inset 0px 0px 10px  #81fbff, 0px 0px 10px  #81fbff;
+          box-shadow: inset 0px 0px 10px  #81fbff, 0px 0px 10px  #81fbff;
+  font-size: 13px;
+  text-align: center;
+  color: #81fbff;
+  padding: 3px 16px;
+  text-decoration: none;
+  border: 2px solid #81fbff;
+  margin-left: 420px;
+}
+
+.more_games_button:hover {
+  font-weight: bolder;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: inset 0px 0px 20px  #519ff8, inset 0px 0px 10px  #4993f4, 0px 0px 15px  #81fbff;
+          box-shadow: inset 0px 0px 20px  #519ff8, inset 0px 0px 10px  #4993f4, 0px 0px 15px  #81fbff;
+  font-size: 13px;
+  text-align: center;
+  color: #81fbff;
+  padding: 3px 16px;
+  text-decoration: none;
+  border: 2px solid #81fbff;
+}

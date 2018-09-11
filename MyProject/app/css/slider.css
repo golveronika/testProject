@@ -1,0 +1,134 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: 1fr repeat(1, minmax(auto, 60em)) 1fr;
+  background-color: black;
+  background-image: url(../img/3_slider/background.png);
+  grid-auto-rows: 295px;
+}
+
+.slider > .content {
+  position: relative;
+}
+
+.slider > .content > .images img {
+  position: relative;
+}
+
+.slider > .content > .images > .chips {
+  z-index: 3;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 70px;
+}
+
+.slider > .content > .images > .logospin {
+  position: absolute;
+  z-index: 2;
+  margin-top: 100px;
+  margin-left: 300px;
+}
+
+.slider > .content > .images > .blik_spin {
+  z-index: 5;
+  position: absolute;
+  margin-top: 60px;
+  margin-left: 270px;
+  -webkit-animation: animation-blik_spin 2s ease infinite;
+          animation: animation-blik_spin 2s ease infinite;
+}
+
+.slider > .content > .images > .blik_spin2 {
+  z-index: 5;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: 90px;
+  -webkit-animation: animation-blik_spin2 3s ease infinite;
+          animation: animation-blik_spin2 3s ease infinite;
+}
+
+.slider > .content > .images > .blik_spin3 {
+  z-index: 5;
+  position: absolute;
+  margin-top: -7px;
+  margin-left: 125px;
+  -webkit-animation: animation-blik_spin 3s ease infinite;
+          animation: animation-blik_spin 3s ease infinite;
+}
+
+.slider > .content > .images > .back {
+  z-index: 1;
+  position: absolute;
+  margin-top: 45px;
+  margin-left: 200px;
+}
+
+.slider > .content > .images > .avtomat {
+  z-index: 1;
+  position: absolute;
+  margin-top: 45px;
+  margin-left: -20px;
+}
+
+@-webkit-keyframes animation-blik_spin {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-blik_spin {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animation-blik_spin2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-blik_spin2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*-------------------------------------------------------------- */
+/*Не нужно, чтобы текст переносился на компьютерах */
+@media screen and (min-device-width: 800px) {
+  .slider {
+    white-space: nowrap;
+  }
+}
+
+/*-------------------------------------------------------------- */
